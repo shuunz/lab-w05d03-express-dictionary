@@ -7,6 +7,11 @@
   <title>Edit Term</title>
 </head>
 <body>
-  
+    <h1>Create new term</h1>
+    <form action="/terms/{{id}}?_method=PUT" method="POST">
+      <label for="name"> term<input id="name" name="name" type="text" value ="{{name}}"></label>
+      <label for="definition">  <input id="definition" type="text" name="definition" value ="{{definition}}"></label>
+      <button type="submit">Edit term</button>
+    </form>
 </body>
-</html>
+</html> 

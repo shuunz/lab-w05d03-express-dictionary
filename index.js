@@ -21,12 +21,15 @@ app.use(logger('dev'));
 var methodOverride = require('method-override');
 app.use(methodOverride('_method'));
 
+app.get('/' , function(req,res){
+  res.render('./index')
+})
 // use controller 
 var termsController = require('./controllers/termsController');
-app.use(termsController);
+app.use('/terms' ,termsController);
 
 app.listen(port, function(){
   console.log('---------------------------------------');
   console.log('Express listening on localhost:' + port);
   console.log('---------------------------------------');
-})
+}) 
